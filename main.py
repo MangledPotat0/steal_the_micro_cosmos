@@ -12,11 +12,11 @@ def start(driver:webdriver):
     time.sleep(60)
 
 def get_driver():
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference('browser.download.folderList', 2) # custom location
-    profile.set_preference('browser.download.manager.showWhenStarting', False)
-    profile.set_preference('browser.download.dir', os.getcwd())
-    profile.set_preference('browser.helperApps.neverAsk.saveToDisk', 'text/html')
+    # profile = webdriver.FirefoxProfile()
+    # profile.set_preference('browser.download.folderList', 2) # custom location
+    # profile.set_preference('browser.download.manager.showWhenStarting', False)
+    # profile.set_preference('browser.download.dir', os.getcwd())
+    # profile.set_preference('browser.helperApps.neverAsk.saveToDisk', 'text/html')
 
     low = 'linux'
     lowfile = "geckodriver"
