@@ -41,12 +41,12 @@ def get_driver():
 def get_images(driver:webdriver):
     # aclasses = driver.find_elements_by_class_name("sc-ikJyIC fHGuxZ")
     # aclasses = driver.find_elements(By.xpath(“//<tagName>[contains(text(),’textvalue’)]”))
-    # aclasses = driver.find_elements(By.xpath(“//<tagName>[contains(text(),’Weekly’)]”))
-    atags = driver.find_elements_by_tag('a')
+    aclasses = driver.find_elements(By.xpath('//a[contains(text(),"Weekly")]'))
+    # atags = driver.find_elements_by_tag('a')
     links = []
     print("in functions")
-    print(atags)
-    for ac in atags:
+    print(aclasses)
+    for ac in aclasses:
         print("in loop")
         if("16x9.png" in ac.text or "Monitor.jpg" ):
             link = ac.getAttribute("href")
