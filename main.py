@@ -1,5 +1,6 @@
 from pathlib import Path
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import os
 from sys import platform
 import time
@@ -38,11 +39,14 @@ def get_driver():
     return driver
 
 def get_images(driver:webdriver):
-    aclasses = driver.find_elements_by_class_name("sc-ikJyIC fHGuxZ")
+    # aclasses = driver.find_elements_by_class_name("sc-ikJyIC fHGuxZ")
+    # aclasses = driver.find_elements(By.xpath(“//<tagName>[contains(text(),’textvalue’)]”))
+    # aclasses = driver.find_elements(By.xpath(“//<tagName>[contains(text(),’Weekly’)]”))
+    atags = driver.find_elements_by_tag('a')
     links = []
     print("in functions")
-    print(aclasses)
-    for ac in aclasses:
+    print(atags)
+    for ac in atags:
         print("in loop")
         if("16x9.png" in ac.text or "Monitor.jpg" ):
             link = ac.getAttribute("href")
