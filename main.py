@@ -41,6 +41,7 @@ def get_images(driver:webdriver):
     aclasses = driver.find_elements_by_class_name("sc-ikJyIC fHGuxZ")
     links = []
     print("in functions")
+    print(aclasses)
     for ac in aclasses:
         print("in loop")
         if("16x9.png" in ac.text or "Monitor.jpg" ):
@@ -54,5 +55,5 @@ if __name__ == '__main__':
     driver = get_driver()
     start(driver)
     driver.get(base_link)
-    time.sleep(4)
+    time.sleep(6)
     get_images(driver)
