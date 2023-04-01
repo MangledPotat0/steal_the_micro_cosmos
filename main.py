@@ -41,7 +41,7 @@ def get_driver():
 def get_images(driver:webdriver):
     # aclasses = driver.find_elements_by_class_name("sc-ikJyIC fHGuxZ")
     # aclasses = driver.find_elements(By.xpath(“//<tagName>[contains(text(),’textvalue’)]”))
-    aclasses = driver.find_elements(By.xpath('//a[contains(text(),"Weekly")]'))
+    aclasses = driver.find_elements(By.XPATH, '//a[contains(text(),"Weekly")]')
     # atags = driver.find_elements_by_tag('a')
     links = []
     print("in functions")
