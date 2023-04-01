@@ -9,7 +9,7 @@ base_link = "https://www.patreon.com/journeytomicro/posts?filters[media_types]=i
 def start(driver:webdriver):
     login_link = "https://www.patreon.com/login?ru=%2Fjourneytomicro"
     driver.get(login_link)
-    time.sleep(60)
+    time.sleep(40)
 
 def get_driver():
     # profile = webdriver.FirefoxProfile()
@@ -48,5 +48,6 @@ def get_images(driver:webdriver):
 if __name__ == '__main__':
     driver = get_driver()
     start(driver)
+    time.sleep(3)
     driver.get(base_link)
     get_images(driver)
